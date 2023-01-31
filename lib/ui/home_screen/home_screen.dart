@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pms_projects/ui/home_screen/subject_screen/subject_screen.dart';
 
 import '../../constants/constants.dart';
 import '../../widgets/category_container_widget.dart';
@@ -196,7 +197,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 10,),
             ///My Subjects Row
-             RowWidget(tileName: "My Subjects",seeAllText: 'See All', onTap: () {  },),
+             RowWidget(tileName: "My Subjects",seeAllText: 'See All', onTap: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>SubjectScreen()));
+             },),
             const SizedBox(height: 10,),
             Container(
               height: 200,

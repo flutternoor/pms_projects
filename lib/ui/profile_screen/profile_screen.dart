@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pms_projects/constants/constants.dart';
+
+import '../../widgets/profile_screen_row_widget.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
@@ -45,7 +47,7 @@ class ProfileScreen extends StatelessWidget {
                      Text('Umar Khan',style: TextStyle(color: Colors.white,fontSize: 15),),
                    ],
                  ),
-                SizedBox(height: 30,),
+                const SizedBox(height: 30,),
               ],
             ),
           ),
@@ -53,12 +55,12 @@ class ProfileScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 35.0),
             child: Divider(thickness: 1,color: kLightBlackColor,),
           ),
-          ProfileScreenRowWidget(text1: 'Form No.',value1: '01-21-0849',text2: 'Student ID',value2: '01-21-13713-B',),
-          ProfileScreenRowWidget(text1: 'DOB',value1: '11-Mar-2006',text2: 'Admission Date',value2: '13-Oct-2021',),
-          ProfileScreenRowWidget(text1: 'Program',value1: 'Computer Science',text2: 'Session',value2: '2021-2023',),
-          ProfileScreenRowWidget(text1: 'Class',value1: 'XII',text2: 'Section',value2: 'P',),
-          ProfileScreenRowWidget(text1: 'Status',value1: 'Active',text2: 'Scholership',value2: 'Null',),
-          ProfileScreenRowWidget(text1: 'Transport',value1: 'No',text2: 'Bus ID',value2: 'Null',),
+          const ProfileScreenRowWidget(text1: 'Form No.',value1: '01-21-0849',text2: 'Student ID',value2: '01-21-13713-B',),
+          const ProfileScreenRowWidget(text1: 'DOB',value1: '11-Mar-2006',text2: 'Admission Date',value2: '13-Oct-2021',),
+          const ProfileScreenRowWidget(text1: 'Program',value1: 'Computer Science',text2: 'Session',value2: '2021-2023',),
+          const ProfileScreenRowWidget(text1: 'Class',value1: 'XII',text2: 'Section',value2: 'P',),
+          const ProfileScreenRowWidget(text1: 'Status',value1: 'Active',text2: 'Scholership',value2: 'Null',),
+          const ProfileScreenRowWidget(text1: 'Transport',value1: 'No',text2: 'Bus ID',value2: 'Null',),
 
 
 
@@ -72,47 +74,4 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
-class ProfileScreenRowWidget extends StatelessWidget {
-  const ProfileScreenRowWidget({
-    required this.text1,
-    required this.value1,
-    required this.text2,
-    required this.value2,
-    Key? key,
-  }) : super(key: key);
 
-final text1,value1,text2,value2;
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          color: Colors.grey.withOpacity(.1),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12.0,horizontal: 5),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children:  [
-              Text(text1.toString(),style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w600
-              ),),
-              Text(value1.toString(),style: TextStyle(color: Colors.black87),),
-              Flexible(
-                child: Text(text2.toString(),style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.w600
-                ),),
-              ),
-              Text(value2.toString(),style: TextStyle(color: Colors.black87),),
-
-
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
