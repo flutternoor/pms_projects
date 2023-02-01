@@ -8,21 +8,21 @@ class ZoomLecturesContainerWidget extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final containerColor;
-  final subjectName;
+  final Color containerColor;
+  final String subjectName;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(2.0),
       child: Container(
-        height: 230,
+        height: 220,
         decoration:BoxDecoration(
           borderRadius:  BorderRadius.circular(10),
           color: containerColor,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,10 +66,10 @@ class ZoomLecturesContainerWidget extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    Text('Test Date:',style: TextStyle(color: Colors.white,fontSize: 14)),
-                    Text('27-Jan-2023',style: TextStyle(color: Colors.white,fontSize: 15)),
-                    Text('Teacher: ',style: TextStyle(color: Colors.white,fontSize: 14)),
-                    Text('Muhammad Ishaq',style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold)),
+                    Text('Test Date:',style: TextStyle(color: Colors.white,fontSize: 10)),
+                    Text('27-Jan-2023',style: TextStyle(color: Colors.white,fontSize: 11)),
+                    Text('Teacher: ',style: TextStyle(color: Colors.white,fontSize: 10)),
+                    Text('Muhammad Ishaq',style: TextStyle(color: Colors.white,fontSize: 11,fontWeight: FontWeight.bold)),
 
 
                   ],

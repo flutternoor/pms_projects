@@ -13,19 +13,22 @@ class ZoomLecturesScreen extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           iconTheme: const IconThemeData(color: Colors.black),
-          leading: Builder(
-            builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(
-                  Icons.menu_outlined,
-                ),
-                onPressed: () {
-                  Scaffold.of(context).openDrawer();
-                },
-                tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-              );
-            },
-          ),
+         leading: Padding(
+           padding: const EdgeInsets.all(8.0),
+           child: Container(
+             decoration: BoxDecoration(
+               borderRadius: BorderRadius.circular(50),
+               color: kAppColor,
+             ),
+             child:  IconButton( onPressed: (){ Navigator. pop(context); },
+               icon:Padding(
+                 padding: const EdgeInsets.only(left: 3.0),
+                 child: Icon(Icons. arrow_back_ios,size: 20,),
+               ),),
+
+           ),
+         ),
+
          title:const Center(child:  Text('Zoom Lectures',style:  TextStyle(color: Colors.black),)),
 
           actions: [
@@ -33,22 +36,17 @@ class ZoomLecturesScreen extends StatelessWidget {
           ],
 
         ),
-        drawer: const Drawer(
-          backgroundColor: Colors.orange,
-        ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Column(
-            children: const[
-              ZoomLecturesContainerWidget(subjectName: 'Process,Multi Programming & \nMulti threading', containerColor: kLightBlueColor,),
-              ZoomLecturesContainerWidget(subjectName: 'Functions of Operating System\n', containerColor: kAppColor,),
-              ZoomLecturesContainerWidget(subjectName: 'Process,Multi Programming & \nMulti threading', containerColor: kPinkColor,),
-              ZoomLecturesContainerWidget(subjectName: 'Functions of Operating System', containerColor: kGreenColor,),
-              ZoomLecturesContainerWidget(subjectName: 'Process,Multi Programming & \nMulti threading', containerColor: kLightBlueColor,),
 
-            ],
-          ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: const[
+            ZoomLecturesContainerWidget(subjectName: 'Process,Multi Programming & \nMulti threading', containerColor: kLightBlueColor,),
+            ZoomLecturesContainerWidget(subjectName: 'Functions of Operating System\n', containerColor: kAppColor,),
+            ZoomLecturesContainerWidget(subjectName: 'Process,Multi Programming & \nMulti threading', containerColor: kPinkColor,),
+            ZoomLecturesContainerWidget(subjectName: 'Functions of Operating System', containerColor: kGreenColor,),
+            ZoomLecturesContainerWidget(subjectName: 'Process,Multi Programming & \nMulti threading', containerColor: kLightBlueColor,),
+
+          ],
         ),
       ),
     );

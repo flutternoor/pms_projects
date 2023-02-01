@@ -15,7 +15,7 @@ class LibraryScreensConainerWidget extends StatelessWidget {
         color: kLightBlueColor,
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(6.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -56,15 +56,14 @@ class LibraryScreensConainerWidget extends StatelessWidget {
               children: [
                 Row(
                   children: const [
-                    Icon(Icons.calendar_today_outlined,size: 30,color: Colors.white,),
+
+                    Text('Test Date:',style: TextStyle(color: Colors.white,fontSize: 11)),
                     SizedBox(width: 2,),
-                    Text('Test Date:',style: TextStyle(color: Colors.white,fontSize: 15)),
-                    SizedBox(width: 2,),
-                    Text('27-Jan-2023',style: TextStyle(color: Colors.white,fontSize: 17)),
+                    Text('27-Jan-2023',style: TextStyle(color: Colors.white,fontSize: 12)),
                   ],
                 ),
                 Container(
-                  height: 40,
+                  height: 35,
                   width: 120,
                   decoration: BoxDecoration(
                     color: const Color(0xfff06709),

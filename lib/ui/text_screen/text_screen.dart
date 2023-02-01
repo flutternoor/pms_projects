@@ -31,7 +31,7 @@ class TextScreen extends StatelessWidget {
             children: [
               ///NO Quiz For You Container
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 7.0),
+                padding: const EdgeInsets.symmetric(horizontal: 5.0),
                 child: Container(
                   height: 60,
                   width: MediaQuery.of(context).size.width/1.7,
@@ -43,7 +43,7 @@ class TextScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
+                        padding: const EdgeInsets.only(left: 4.0),
                         child: Container(
                           height: 50,
                           width: 50,
@@ -57,8 +57,8 @@ class TextScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 15),
-                      const Text('No Quiz For You',style: kTextStyle,)
+                      const SizedBox(width: 2),
+                      const Text('No Quiz For You',style: TextStyle(fontSize: 15,fontWeight: FontWeight.w600),)
 
                     ],
                   ),

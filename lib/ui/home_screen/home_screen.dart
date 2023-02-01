@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(children: [
 
             ///Category Row
@@ -129,7 +129,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color:kLightBlueColor,
               ),
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(5.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -164,27 +164,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       ,textAlign: TextAlign.justify,),
                     const SizedBox(height: 25,),
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Expanded(
-                          child: Row(
-                            children: const [
-                              Icon(Icons.calendar_today_outlined,size: 21,),
-                              SizedBox(width: 5,),
+
                               Text('Published Date:',style: TextStyle(fontSize: 10),),
-                              Text('27-Jan-2023',style: TextStyle(fontSize: 11),),
-                            ],
-                          ),
-                        ),
-                        Expanded(
-                          child: Row(
-                            children: const [
-                              Icon(Icons.calendar_today_outlined,size: 21,),
-                              SizedBox(width: 5,),
+                              Text('27-Jan-2023',style: TextStyle(fontSize: 10.5),),
+
                               Text('Published Date:',style: TextStyle(fontSize: 10),),
-                              Text('27-Jan-2023',style: TextStyle(fontSize: 11),),
-                            ],
-                          ),
-                        ),
+                              Text('27-Jan-2023',style: TextStyle(fontSize: 10.5),),
+
 
 
                       ],

@@ -25,9 +25,11 @@ class SubjectScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50),
                 color: kAppColor,
               ),
-              child: const BackButton(
-                color: Colors.black,
-              ),
+              child:  IconButton( onPressed: (){ Navigator. pop(context); },
+                icon:Padding(
+                  padding: const EdgeInsets.only(left: 3.0),
+                  child: Icon(Icons. arrow_back_ios,size: 20,),
+                ),),
 
             ),
           ),

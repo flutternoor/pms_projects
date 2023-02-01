@@ -11,14 +11,14 @@ class SubjectDetailsWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10,),
+      padding: const EdgeInsets.symmetric(vertical: 5,),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(width: 1,color: Colors.grey.withOpacity(.2))
 
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(5.0),
         child: Row(
           children: [
             ///Container For Subject Image
@@ -43,7 +43,7 @@ class SubjectDetailsWidgets extends StatelessWidget {
                     children: [
                       Text(subjectName.toString(),style: kTextStyle),
                       Container(
-                                  width: 50,
+                                  width: 45,
                                   decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(5),
                                       color: kAppColor
@@ -52,31 +52,22 @@ class SubjectDetailsWidgets extends StatelessWidget {
                                 ),
                     ],
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(height: 6,),
                   ///Row for Icons And Texts
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        children: const [
-                          Icon(Icons.calendar_today_outlined,size: 17,color: Colors.black,),
-                          SizedBox(width: 2,),
-                          Text('Test Date:',style: TextStyle(fontSize: 12),),
-                          SizedBox(width: 2,),
-                          Text('27-Jan-2023',style: TextStyle(fontSize: 13),),
-                        ],
-                      ),
 
-                      Row(
-                        children: const [
+                          Text('Test Date:',style: TextStyle(fontSize: 10),),
 
-                          Icon(Icons.refresh,size: 17,color: Colors.black,),
-                          SizedBox(width: 2,),
-                          Text('Status:',style: TextStyle(fontSize: 12),),
-                          SizedBox(width: 2,),
-                          Text('Attempted',style: TextStyle(fontSize: 13,color: Colors.green),)
-                        ],
-                      ),
+                          Text('27-Jan-2023',style: TextStyle(fontSize: 10.5),),
+
+
+
+
+                          Text('Status:',style: TextStyle(fontSize: 10),),
+                          Text('Attempted',style: TextStyle(fontSize: 10.5,color: Colors.green),)
+
 
 
                     ],

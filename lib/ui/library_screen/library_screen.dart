@@ -18,7 +18,7 @@ class LibraryScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               const SizedBox(height: 5,),

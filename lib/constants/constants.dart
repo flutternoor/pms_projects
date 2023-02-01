@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-  const  kTextStyle = TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 18) ;
+  const  kTextStyle = TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 17) ;
   const kBlueColor = Color(0xff4C69E6);
   const kLightBlueColor = Color(0xff3E8DFD);
   const kGreenColor = Color(0xff37C396);
