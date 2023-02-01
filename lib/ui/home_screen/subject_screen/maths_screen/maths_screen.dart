@@ -49,6 +49,13 @@ class MathsScreen extends StatelessWidget {
               iconColor: Colors.purple,
               titleText: 'Syllabus',
             ),
+            SubjectSetailsScreenWidget(
+              onTap: () {  },
+              containerColor: Colors.red.withOpacity(.2),
+              containerIcon: Icons.file_copy_rounded,
+              iconColor: Colors.red,
+              titleText: 'Model Paper',
+            ),
           ],
         ),
       )
