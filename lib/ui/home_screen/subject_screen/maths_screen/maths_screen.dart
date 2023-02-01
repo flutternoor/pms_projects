@@ -21,9 +21,9 @@ class MathsScreen extends StatelessWidget {
             titleText: 'Subject Notes', iconColor: kBlueColor,),
           SubjectSetailsScreenWidget(
             onTap: () {  },
-            containerColor: kPurpleColor.withOpacity(.2),
+            containerColor: kPinkColor.withOpacity(.2),
             containerIcon: Icons.edit_outlined,
-            iconColor: kPurpleColor,
+            iconColor: kPinkColor,
             titleText: 'Assignments',
 
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pms_projects/ui/lectures_screen/zoom_lectures/zoom_lectures.dart';
 
 import '../../widgets/lectures_screen_list_tile_widget.dart';
 
@@ -22,25 +23,33 @@ class LecturesScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 10),
           child: Column(
-            children: const [
-              LecturesScreenListTile(subjectName: 'Computer Science',videosText: '2 videos',),
-              SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'Physice',videosText: '5 videos',),
-              SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'Biology',videosText: '8 videos',),
-              SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'Chemistry',videosText: '2 videos',),
-              SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'Maths',videosText: '7 videos',),
-              SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'English',videosText: '3 videos',),
-              SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'Urdu',videosText: '1 videos',),
-              SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'Islamyat',videosText: '6 videos',),
-              SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'Pak Studies',videosText: '3 videos',),
-              SizedBox(height: 5,),
+            children:  [
+              LecturesScreenListTile(subjectName: 'Computer Science',videosText: '2 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              LecturesScreenListTile(subjectName: 'Physice',videosText: '5 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              LecturesScreenListTile(subjectName: 'Biology',videosText: '8 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              LecturesScreenListTile(subjectName: 'Chemistry',videosText: '2 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              LecturesScreenListTile(subjectName: 'Maths',videosText: '7 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              LecturesScreenListTile(subjectName: 'English',videosText: '3 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              LecturesScreenListTile(subjectName: 'Urdu',videosText: '1 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              LecturesScreenListTile(subjectName: 'Islamyat',videosText: '6 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              LecturesScreenListTile(subjectName: 'Pak Studies',videosText: '3 videos', onTap: () {  },),
+              const SizedBox(height: 5,),
+              ///TODO:We can move from here to zoom lectures screen
+              LecturesScreenListTile(subjectName: 'Zoom Lectures',videosText: '9 videos',
+                onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ZoomLecturesScreen()));
+                },),
+              const SizedBox(height: 5,),
+
+
             ],
           ),
         ),
