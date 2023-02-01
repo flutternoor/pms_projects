@@ -15,28 +15,38 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
 
   ///Images list
-  List<String> subjectImageList = [
-    'assets/images/chemistry_img.png',
-    'assets/images/physics_img.png',
-    'assets/images/biology_img.png',
-    'assets/images/english_img.jpg',
-    'assets/images/maths_img.png',
-    'assets/images/urdu_img.png',
-    'assets/images/islamyat_img.png',
-    'assets/images/pak_studies_img.png',
-    'assets/images/pak_studies_img.png',
+  List<IconData> subjectImageList = [
+    Icons.add,
+    Icons.settings_outlined,
+    Icons.add,
+    Icons.add,
+    Icons.add,
+    Icons.add,
+    Icons.add,
+    Icons.add,
+    Icons.add,
+
+    // 'assets/images/chemistry_img.png',
+    // 'assets/images/physics_img.png',
+    // 'assets/images/biology_img.png',
+    // 'assets/images/english_img.jpg',
+    // 'assets/images/maths_img.png',
+    // 'assets/images/urdu_img.png',
+    // 'assets/images/islamyat_img.png',
+    // 'assets/images/pak_studies_img.png',
+    // 'assets/images/pak_studies_img.png',
 
   ];
   List<String> subjectNameList = [
-    'Che',
-    'Phy',
-    'Bio',
-    'Eng',
-    'Math',
-    'Ur',
-    'Is',
-    'PS',
-    'CS',
+    'Chemistry',
+    'Physics',
+    'Biology',
+    'English',
+    'Maths',
+    'Urdu',
+    'Islamyat',
+    'Pak study',
+    'Computer \nScience',
 
   ];
   List<Color> subjectContainerColor = [
@@ -191,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
              },),
             const SizedBox(height: 10,),
             Container(
-              height: 200,
+              height: 140,
               width: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
@@ -210,23 +220,24 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            height: 80,
-                            width: 80,
+                            height: 75,
+                            width: 75,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
                               color: subjectContainerColor[index],
                             ),
-                            child: Image.asset(
-                             subjectImageList[index],
-                              fit: BoxFit.cover,
-                              height: 40,
-                              width: 40,
-
-                            ),
+                            child: Icon( subjectImageList[index],size: 50,color: Colors.white,),
+                            // child: Image.asset(
+                            //  subjectImageList[index],
+                            //   fit: BoxFit.cover,
+                            //   height: 40,
+                            //   width: 40,
+                            //
+                            // ),
                             //child: Text('ABC'),
                           ),
                           const SizedBox(height: 10),
-                          Text(subjectNameList[index],style: const TextStyle(color: Colors.black),
+                          Text(subjectNameList[index],textAlign: TextAlign.justify,style: const TextStyle(color: Colors.black),
                           ),
 
                         ],
