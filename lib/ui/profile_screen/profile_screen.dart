@@ -36,7 +36,7 @@ class ProfileScreen extends StatelessWidget {
                   const SizedBox(height: 15,),
                   Image.asset('assets/images/profile_img.png'),
                   const SizedBox(height: 10,),
-                  const Text('MUHAMMAD HUZAIFA',style: const TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 18),),
+                  const Text('MUHAMMAD HUZAIFA',style:  TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 18),),
                   const SizedBox(height: 5,),
 
                   Row(

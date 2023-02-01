@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
       body:  pages[currentIndex],
 
       ///TODO: Here we change the background color of Bottom Navigation
-      bottomNavigationBar:  Container(
+      bottomNavigationBar:  SizedBox(
         height: 80,
         child: ClipRRect(
           borderRadius: const BorderRadius.only(

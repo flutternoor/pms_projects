@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pms_projects/constants/constants.dart';
 
-import '../../widgets/category_container_widget.dart';
 import '../../constants/constants.dart';
 import '../../widgets/subject_details_widgets.dart';
 

@@ -21,8 +21,8 @@ class ZoomLecturesScreen extends StatelessWidget {
                color: kAppColor,
              ),
              child:  IconButton( onPressed: (){ Navigator. pop(context); },
-               icon:Padding(
-                 padding: const EdgeInsets.only(left: 3.0),
+               icon:const Padding(
+                 padding: EdgeInsets.only(left: 3.0),
                  child: Icon(Icons. arrow_back_ios,size: 20,),
                ),),
 

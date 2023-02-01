@@ -26,7 +26,7 @@ class LecturesScreen extends StatelessWidget {
             children:  [
               LecturesScreenListTile(subjectName: 'Computer Science',videosText: '2 videos', onTap: () {  },),
               const SizedBox(height: 5,),
-              LecturesScreenListTile(subjectName: 'Physice',videosText: '5 videos', onTap: () {  },),
+              LecturesScreenListTile(subjectName: 'Physics',videosText: '5 videos', onTap: () {  },),
               const SizedBox(height: 5,),
               LecturesScreenListTile(subjectName: 'Biology',videosText: '8 videos', onTap: () {  },),
               const SizedBox(height: 5,),
@@ -45,7 +45,7 @@ class LecturesScreen extends StatelessWidget {
               ///TODO:We can move from here to zoom lectures screen
               LecturesScreenListTile(subjectName: 'Zoom Lectures',videosText: '9 videos',
                 onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>ZoomLecturesScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const ZoomLecturesScreen()));
                 },),
               const SizedBox(height: 5,),
 

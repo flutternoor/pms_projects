@@ -23,7 +23,7 @@ class LibraryScreensConainerWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Icon(Icons.folder_outlined,size: 30,color: Colors.white,),
                     SizedBox(width: 10,),
                     Text('Serial No.',style: TextStyle(color: Colors.white,fontSize: 17),)
@@ -31,7 +31,7 @@ class LibraryScreensConainerWidget extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  children: [
+                  children: const [
                     Icon(Icons.folder_outlined,size: 30,color: Colors.white,),
                     SizedBox(width: 10,),
                     Text('Accession No.',style: TextStyle(color: Colors.white,fontSize: 17),)
@@ -43,14 +43,14 @@ class LibraryScreensConainerWidget extends StatelessWidget {
             ),
 
             Row(
-              children: [
+              children: const [
                 Icon(Icons.save,size: 30,color: Colors.white,),
                 SizedBox(width: 10,),
                 Text('Book Name:',style: TextStyle(color: Colors.white,fontSize: 17),)
 
               ],
             ),
-            SizedBox(height: 15,),
+            const SizedBox(height: 15,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -69,7 +69,7 @@ class LibraryScreensConainerWidget extends StatelessWidget {
                     color: const Color(0xfff06709),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: const Center(child: const Text('Download',style: TextStyle(fontSize: 18,color: Colors.white),),),
+                  child: const Center(child: Text('Download',style: TextStyle(fontSize: 18,color: Colors.white),),),
                 )
               ],
             ),

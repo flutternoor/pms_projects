@@ -153,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: kGreenColor,
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: const Center(child: const Text('Subject',)),
+                          child: const Center(child: Text('Subject',)),
                         ),
 
 
@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
+                      children: const [
 
                               Text('Published Date:',style: TextStyle(fontSize: 10),),
                               Text('27-Jan-2023',style: TextStyle(fontSize: 10.5),),
@@ -187,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 10,),
             ///My Subjects Row
              RowWidget(tileName: "My Subjects",seeAllText: 'See All', onTap: () {
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>SubjectScreen()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>const SubjectScreen()));
              },),
             const SizedBox(height: 10,),
             Container(
@@ -272,7 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: const Color(0xfff06709),
                           borderRadius: BorderRadius.circular(5),
                         ),
-                        child: const Center(child: const Text('Download',style: TextStyle(fontSize: 18,color: Colors.white),),),
+                        child: const Center(child: Text('Download',style: TextStyle(fontSize: 18,color: Colors.white),),),
                       ),
                     )
                   ],
