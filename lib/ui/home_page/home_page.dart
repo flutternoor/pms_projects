@@ -39,12 +39,12 @@ class _HomePageState extends State<HomePage> {
         child: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             backgroundColor: Colors.white54,
-            iconSize: 24.0,
-            selectedIconTheme: const IconThemeData(size: 30.0,),
+            iconSize: 20.0,
+            selectedIconTheme: const IconThemeData(size: 26.0,),
             selectedItemColor: Colors.white,
             unselectedItemColor: Colors.white54,
             selectedFontSize: 13.0,
-            unselectedFontSize: 13,
+            unselectedFontSize: 12,
             selectedLabelStyle:  const TextStyle(fontWeight: FontWeight.bold,color: Colors.red,),
             unselectedLabelStyle:
             const TextStyle(color: Colors.grey, fontWeight: FontWeight.normal),
@@ -56,8 +56,8 @@ class _HomePageState extends State<HomePage> {
               BottomNavigationBarItem(
 
                 icon:currentIndex== 0 ?Container(
-                  height: 40,
-                  width: 40,
+                  height: 35,
+                  width: 35,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: kAppColor
