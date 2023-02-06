@@ -8,4 +8,5 @@ import 'package:flutter/material.dart';
   const kLightCreemColor = Color(0xffFFCD90);
   const kPinkColor = Color(0xffE877EF);
   const kLightBlackColor = Color(0xff565153);
-  const kAppColor = Color(0xffFF7535);
+  const kAppColor = Color(0xffE67926);
+  const kTextFieldColor = Color(0xffF2F3F7);

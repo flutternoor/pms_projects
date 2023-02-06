@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pms_projects/ui/home_page/home_page.dart';
+import 'package:pms_projects/ui/splash_screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Inter',
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
     );
   }
 }
