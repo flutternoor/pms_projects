@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^1.1.6
   toggle_switch: ^2.0.1
   fluttertoast: any
+  awesome_dropdown: ^0.0.4
 
 
 dev_dependencies:

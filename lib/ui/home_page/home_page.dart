@@ -75,9 +75,9 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(30),
                       color: kAppColor
                   ),
-                  child:  const Icon(Icons.file_present),
-                ): Icon(Icons.file_present),
-                label: "Test",
+                  child:  const Icon(Icons.quiz),
+                ): Icon(Icons.quiz),
+                label: "Quiz",
               ),
                BottomNavigationBarItem(
                 icon: currentIndex== 2 ?Container(
@@ -90,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                   child:  const Icon(Icons.featured_play_list_outlined),
                 )
                     :Icon(Icons.featured_play_list_outlined),
-                label: "Lectures",
+                label: "Notice",
               ),
                BottomNavigationBarItem(
                 icon: currentIndex== 3 ?Container(
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child:  const Icon(Icons.library_books_outlined),
                 ): Icon(Icons.library_books_outlined),
-                label: "Library",
+                label: "Subjects",
               ),
                BottomNavigationBarItem(
                 icon: currentIndex== 4 ?Container(

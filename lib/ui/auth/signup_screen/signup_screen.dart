@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pms_projects/constants/constants.dart';
+import 'package:pms_projects/ui/auth/login_screen/login_screen.dart';
 
 import '../../../widgets/facebook_google_btn_widget.dart';
 import '../../../widgets/signin_login_btn_widget.dart';
@@ -36,6 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               padding: const EdgeInsets.all(15.0),
               child: Column(
                 children: [
+                  SizedBox(height: 10,),
                   ///Create your Account Text
                   const Padding(
                     padding: EdgeInsets.only(top: 20.0),
@@ -203,7 +205,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     onPressed: () {},
                                   ),
                                 );
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomePage()));
+                                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const HomePage()));
 
 
                                 ScaffoldMessenger.of(context)
@@ -235,7 +237,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomePage()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginScreen()));
                     },
                     child: RichText(
                         text: const TextSpan(

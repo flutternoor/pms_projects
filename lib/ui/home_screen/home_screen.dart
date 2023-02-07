@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ///Category Container
             Row(
               children: [
-                CategoryContainerWidget(containerText: 'Classes',
+                CategoryContainerWidget(containerText: 'Fee',
                   containerColor: kAppColor,
                   containerImage: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 const SizedBox(width: 10,),
-                CategoryContainerWidget(containerText: 'Tests',
+                CategoryContainerWidget(containerText: 'Time Table',
                   containerColor: kGreenColor,
                   containerImage: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -136,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color:kLightBlueColor,
+                color:kPinkColor,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
@@ -170,8 +170,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     const SizedBox(height: 25,),
-                     const Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since 1500s.'
-                      ,textAlign: TextAlign.justify,),
+                     const Text('YOUR RECENT ANNOUNCEMENT'
+                      ,textAlign: TextAlign.start,
+                       style: TextStyle(fontSize: 25,fontWeight: FontWeight.w900),),
                     const SizedBox(height: 25,),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -246,6 +247,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   }),
             ),
             const SizedBox(height: 10,),
+           ///Date Sheet Row and Container
            RowWidget(tileName: 'Date Sheet', seeAllText: 'Sell All', onTap: (){}),
             const SizedBox(height: 10,),
             Container(
@@ -289,7 +291,201 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-            )
+            ),
+            const SizedBox(height: 10,),
+            ///Student Fee Record Row and Container
+            RowWidget(tileName: 'Student Fee Record', seeAllText: 'See All', onTap: (){}),
+            const SizedBox(height: 10,),
+            Container(
+              height: 220,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: kPinkColor,
+                borderRadius: BorderRadius.circular(10),
+
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  children: [
+                    SizedBox(
+
+                      width: double.infinity,
+                      child: DataTable(
+                        headingRowHeight: 26,
+                        dataRowHeight: 26,
+                          border: TableBorder.all(color: Colors.white,width: 1),
+                        decoration:BoxDecoration(
+                          color: kPinkColor,
+                          borderRadius: BorderRadius.circular(20),
+
+
+                        ),
+
+                        columns: const[
+                          DataColumn(label: Text('')),
+                          DataColumn(label: Text('')),
+                          DataColumn(label: Text('')),
+                          DataColumn(label: Text('')),
+                          DataColumn(label: Text('')),
+                        ],
+                        rows: const [
+                          DataRow(cells: [
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                            DataCell(Text('')),
+                          ]),
+
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                      Text("Total Fee: 0"),
+                      Text("Paid : 0"),
+                      Text("Paid : 0"),
+                      Text("27-Jan-2023"),
+                    ],)
+
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 10,),
+            ///Time Table Row and Container
+            RowWidget(tileName: "Time Table", seeAllText: "See All", onTap: (){}),
+            const SizedBox(height: 10,),
+            Container(
+
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: kLightBlueColor,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: const [
+                        Text('S#',style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                        Text('Class',style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                        Text('Program',style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                        Text('Section',style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                      ],
+                    ),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: const [
+                        Flexible(child: DateSheetContainerWidgets(text: '1',)),
+                        SizedBox(width: 5),
+                        Flexible(child: DateSheetContainerWidgets(text: 'XII',)),
+                        SizedBox(width: 5),
+                        Flexible(child:  DateSheetContainerWidgets(text: 'Computer Science',)),
+                        SizedBox(width: 5),
+                        Flexible(child: DateSheetContainerWidgets(text: 'Theory',)),
+
+                      ],
+                    ),
+                    SizedBox(height: 30,),
+                    Align(
+                      alignment: Alignment.bottomLeft,
+                      child: Container(
+                        height: 40,
+                        width: 120,
+                        decoration: BoxDecoration(
+                          color: const Color(0xfff06709),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: const Center(child: Text('Download',style: TextStyle(fontSize: 18,color: Colors.white),),),
+                      ),
+                    )
+
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(height: 10,),
+            ///Attendance Report Row And Container
+            RowWidget(tileName: "Attendance Report", seeAllText: 'See All', onTap: (){}),
+            const SizedBox(height: 10,),
+            Container(
+               height: 150,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: kGreenColor,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Text('Student Absent/Leave(s) Record',style: TextStyle(color: Colors.white,fontSize: 14),),
+                    SizedBox(height: 15),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Flexible(child: DateSheetContainerWidgets(text: 'S.No.',)),
+                        SizedBox(width: 5),
+                        Flexible(child: DateSheetContainerWidgets(text: 'Date',)),
+                        SizedBox(width: 5),
+                        Flexible(child:  DateSheetContainerWidgets(text: 'Computer Science',)),
+                        SizedBox(width: 5),
+                        SizedBox(width: 100,),
+
+                      ],
+                    ),
+                    SizedBox(height: 15),
+
+                    Text('Absent/Leave(s) Record Not Found',style: TextStyle(color: Colors.white,fontSize: 11),),
+                    SizedBox(height: 15),
+
+
+
+                  ],
+                ),
+              ),
+            ),
+
+
+
+
+
 
 
 

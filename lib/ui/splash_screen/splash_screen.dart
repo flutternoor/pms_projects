@@ -17,10 +17,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3),
+    Timer(const Duration(seconds: 3),
             ()=>Navigator.pushReplacement(context,
             MaterialPageRoute(builder:
-                (context) => SignUpScreen()
+                (context) => const SignUpScreen()
             )
         )
     );
@@ -40,12 +40,14 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: Image.asset('assets/images/splash_logo.png')),
 
               Column(
-                children: [
-                  Text('WELCOME TO',style: TextStyle(fontSize: 16,color: Colors.white
+                children: const [
+                  Text('WELCOME TO',style: TextStyle(fontSize: 16,color: Colors.white,
+
                   ),),
                   SizedBox(height: 15,),
 
-                  Text('PESHAWAR',style: TextStyle(fontSize: 23,color: Colors.white,fontWeight: FontWeight.bold)
+                  Text('PESHAWAR',style: TextStyle(fontSize: 30,color: Colors.white,fontWeight: FontWeight.bold,
+                      wordSpacing: 4,height: 1)
                   ),
                   Text('MODEL SCHOOL',style: TextStyle(color: Colors.white,fontSize: 13
                   ),),
