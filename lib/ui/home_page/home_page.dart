@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                       color: kAppColor
                   ),
                   child:  const Icon(Icons.quiz),
-                ): Icon(Icons.quiz),
+                ): const Icon(Icons.quiz),
                 label: "Quiz",
               ),
                BottomNavigationBarItem(
@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child:  const Icon(Icons.featured_play_list_outlined),
                 )
-                    :Icon(Icons.featured_play_list_outlined),
+                    :const Icon(Icons.featured_play_list_outlined),
                 label: "Notice",
               ),
                BottomNavigationBarItem(
@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                       color: kAppColor
                   ),
                   child:  const Icon(Icons.library_books_outlined),
-                ): Icon(Icons.library_books_outlined),
+                ): const Icon(Icons.library_books_outlined),
                 label: "Subjects",
               ),
                BottomNavigationBarItem(
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                       color: kAppColor
                   ),
                   child:  const Icon(Icons.person_outline),
-                ): Icon(Icons.person_outline),
+                ): const Icon(Icons.person_outline),
                 label: "profile",
               ),
             ]),
