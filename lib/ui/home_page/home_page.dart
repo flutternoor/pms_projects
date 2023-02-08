@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
- static int currentIndex =0;
+ static int currentIndex = 0;
   final  pages = [ const HomeScreen(), const TextScreen(), const LecturesScreen(), const LibraryScreen(), const ProfileScreen()];
 
   void onTapped(int index) {

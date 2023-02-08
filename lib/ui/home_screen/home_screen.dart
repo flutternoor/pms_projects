@@ -5,6 +5,8 @@ import '../../constants/constants.dart';
 import '../../widgets/category_container_widget.dart';
 import '../../widgets/date_sheet_container.dart';
 import '../../widgets/row_widget.dart';
+import 'dart:math';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
