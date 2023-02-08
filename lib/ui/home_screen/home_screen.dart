@@ -5,7 +5,6 @@ import '../../constants/constants.dart';
 import '../../widgets/category_container_widget.dart';
 import '../../widgets/date_sheet_container.dart';
 import '../../widgets/row_widget.dart';
-import 'dart:math';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -28,15 +27,6 @@ class _HomeScreenState extends State<HomeScreen> {
     Icons.add,
     Icons.add,
 
-    // 'assets/images/chemistry_img.png',
-    // 'assets/images/physics_img.png',
-    // 'assets/images/biology_img.png',
-    // 'assets/images/english_img.jpg',
-    // 'assets/images/maths_img.png',
-    // 'assets/images/urdu_img.png',
-    // 'assets/images/islamyat_img.png',
-    // 'assets/images/pak_studies_img.png',
-    // 'assets/images/pak_studies_img.png',
 
   ];
   List<String> subjectNameList = [
@@ -230,14 +220,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: subjectContainerColor[index],
                             ),
                             child: Icon( subjectImageList[index],size: 50,color: Colors.white,),
-                            // child: Image.asset(
-                            //  subjectImageList[index],
-                            //   fit: BoxFit.cover,
-                            //   height: 40,
-                            //   width: 40,
-                            //
-                            // ),
-                            //child: Text('ABC'),
+
                           ),
                           const SizedBox(height: 10),
                           Text(subjectNameList[index],textAlign: TextAlign.justify,style: const TextStyle(color: Colors.black),
