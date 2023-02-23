@@ -12,7 +12,8 @@ class MathsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-        SubjectSetailsScreenWidget(containerColor: kAppColor.withOpacity(.2),
+            SubjectSetailsScreenWidget(
+          containerColor: kAppColor.withOpacity(.2),
           onTap: () {  },
           containerIcon: Icons.play_circle_fill_outlined,
           titleText: 'Videos Lectures', iconColor: kAppColor,),
