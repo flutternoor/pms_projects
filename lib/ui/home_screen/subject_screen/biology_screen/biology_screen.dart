@@ -14,7 +14,8 @@ class BiologyScreen extends StatelessWidget {
             children: [
               SubjectSetailsScreenWidget(
                 containerColor: kAppColor.withOpacity(.2),
-                onTap: () {  },
+                onTap: () {
+                },
                 containerIcon: Icons.play_circle_fill_outlined,
                 titleText: 'Videos Lectures', iconColor: kAppColor,),
               SubjectSetailsScreenWidget(containerColor: kBlueColor.withOpacity(.2),
