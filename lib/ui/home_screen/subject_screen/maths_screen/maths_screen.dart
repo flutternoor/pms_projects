@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/assignment_screen/assignment_screen.dart';
+import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/subject_diary_screen/subject_diary_screen.dart';
 import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/subject_notes_screen/subject_notes_screen.dart';
 import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/video_lecture_screen/video_lecture_screen.dart';
 
@@ -44,7 +45,10 @@ class MathsScreen extends StatelessWidget {
 
             ),
             SubjectSetailsScreenWidget(
-              onTap: () {  },
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SubjectDiaryScreen()));
+
+              },
               containerColor: kGreenColor.withOpacity(.2),
               containerIcon: Icons.library_books_outlined,
               iconColor: kGreenColor,
