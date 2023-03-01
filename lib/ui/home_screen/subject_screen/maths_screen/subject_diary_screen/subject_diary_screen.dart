@@ -50,6 +50,8 @@ class _SubjectDiaryScreenState extends State<SubjectDiaryScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Text('Computer Science',style: kTextStyle,),
+            SizedBox(height: 10,),
             Container(
               height: 220,
               width: double.infinity,
