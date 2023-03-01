@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/assignment_screen/assignment_screen.dart';
 import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/subject_diary_screen/subject_diary_screen.dart';
 import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/subject_notes_screen/subject_notes_screen.dart';
+import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/syllabus_screen/syllabus_screen.dart';
 import 'package:pms_projects/ui/home_screen/subject_screen/maths_screen/video_lecture_screen/video_lecture_screen.dart';
 
 import '../../../../constants/constants.dart';
@@ -62,7 +63,10 @@ class MathsScreen extends StatelessWidget {
               titleText: 'MCQs',
             ),
             SubjectSetailsScreenWidget(
-              onTap: () {  },
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>SyllabusScreen()));
+
+              },
               containerColor: Colors.purple.withOpacity(.2),
               containerIcon: Icons.sticky_note_2,
               iconColor: Colors.purple,

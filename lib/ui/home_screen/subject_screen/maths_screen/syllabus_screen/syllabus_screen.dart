@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../constants/constants.dart';
-
-class SubjectDiaryScreen extends StatefulWidget {
-  const SubjectDiaryScreen({Key? key}) : super(key: key);
+class SyllabusScreen extends StatefulWidget {
+  const SyllabusScreen({Key? key}) : super(key: key);
 
   @override
-  State<SubjectDiaryScreen> createState() => _SubjectDiaryScreenState();
+  State<SyllabusScreen> createState() => _SyllabusScreenState();
 }
 
-class _SubjectDiaryScreenState extends State<SubjectDiaryScreen> {
+class _SyllabusScreenState extends State<SyllabusScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,19 +43,19 @@ class _SubjectDiaryScreenState extends State<SubjectDiaryScreen> {
           ),
           title: const Center(
               child: Text(
-            'Subject Diary',
-            style: TextStyle(color: Colors.black),
-          ))),
+                'Syllabus',
+                style: TextStyle(color: Colors.black),
+              ))),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Text('Computer Science',style: kTextStyle,),
             SizedBox(height: 10,),
             Container(
-              height: 220,
+              height: 160,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.green.withOpacity(.1),
+                color: Colors.grey.withOpacity(.5),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(2.0),
@@ -64,55 +63,44 @@ class _SubjectDiaryScreenState extends State<SubjectDiaryScreen> {
                   children: [
                     DataTable(
                       headingRowColor: MaterialStateColor.resolveWith(
-                          (states) => Colors.orangeAccent),
+                              (states) => Colors.white),
                       checkboxHorizontalMargin: 0,
-                      columnSpacing: 5,
                       horizontalMargin: 0,
+                      columnSpacing: 5,
+
                       headingRowHeight: 30,
                       dataRowHeight: 120,
                       border: TableBorder.all(color: Colors.blueGrey, width: 1),
                       decoration: BoxDecoration(
-                        color: Colors.green.withOpacity(.1),
+                        color: Colors.grey.withOpacity(.5),
+
                       ),
                       columns: const [
-                        DataColumn(label: Text('WeekNo')),
-                        DataColumn(label: Text('Chapter')),
-                        DataColumn(label: Text('Topic')),
-                        DataColumn(label: Text('Details')),
+                        DataColumn(label: Text('S#')),
+                        DataColumn(label: Text('Class')),
+                        DataColumn(label: Text('Subject')),
+                        DataColumn(label: Text('Type')),
+                        DataColumn(label: Text('Syllabus')),
                       ],
-                      rows: const [
+                      rows:  [
                         DataRow(cells: [
                           DataCell(Text('1')),
-                          DataCell(Text('1')),
-                          DataCell(Text('Operating System')),
-                          DataCell(Text(
-                              'Operating System Functions & Process Management')),
+                          DataCell(Text('XII')),
+                          DataCell(Text('Computer Science')),
+                          DataCell(Text('Second Achievement Test Syllabus',textAlign: TextAlign.justify,)),
+                          DataCell(Container(
+                            height: 33,
+                            width: 90,
+                            decoration: BoxDecoration(
+                              color: const Color(0xfff06709),
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                            child: const Center(child: Text('View',style: TextStyle(fontSize: 18,color: Colors.white),),),
+                          )),
                         ]),
                       ],
                     ),
-                    const SizedBox(height: 12),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
 
-                          children: [
-                            Text("Delivered Date",style: TextStyle(fontSize: 13,),),
-                            SizedBox(width: 5,),
-                            Text("2022/09/16",style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
-                          ],
-                        ),
-                        Row(
-
-                          children: [
-                            Text("Status:",style: TextStyle(fontSize: 13,),),
-                            SizedBox(width: 5,),
-                            Text("Completed",style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
-                          ],
-                        ),
-                      ],
-                    )
                   ],
                 ),
               ),
@@ -120,6 +108,7 @@ class _SubjectDiaryScreenState extends State<SubjectDiaryScreen> {
           ],
         ),
       ),
+
     );
   }
 }
